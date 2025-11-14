@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "BUILD_PATHreact-scripts build",
+    "build": "BUILD_PATH=static_client react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
@@ -46,7 +46,6 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^10.1.0",
     "react-router-dom": "^6.9.0"
   },
   "overrides": {

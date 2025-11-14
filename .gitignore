@@ -1,6 +1,3 @@
 /node_modules
-/build
-1NPDPRO5.DOC
-/static_client
-deploy.sh
+*.sh
 *.pem
