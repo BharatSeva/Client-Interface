@@ -23,8 +23,8 @@ export default function LoginPage() {
 
     useEffect(()=>{
         setCredentials(e => ({
-            "health_id": params.get("health_id"),
-            "password": params.get("pass")
+            "health_id": params.get("health_id") || "GuestUser-001",
+            "password": params.get("pass") || "12345"
         }));
     },[params])
 
@@ -133,7 +133,7 @@ export default function LoginPage() {
                             className="InputField"
                             placeholder="Health ID"
                             name="health_id"
-                            value={params.get("health_id") !== "" ? params.get("health_id") : credentials.health_id}
+                            value={params.get("health_id") || "GuestUser-001"}
                             onChange={handleInputChange}
                             // disabled={!!credentials.health_id}
                             required
@@ -145,7 +145,7 @@ export default function LoginPage() {
                             className="InputField"
                             placeholder="Password"
                             name="password"
-                            value={params.get("pass") !== "" ? params.get("pass") : credentials.password}
+                            value={params.get("pass") || "12345"}
                             onChange={handleInputChange}
                             // disabled={!!credentials.password}
                             required
